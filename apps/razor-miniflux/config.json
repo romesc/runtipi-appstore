@@ -1,0 +1,41 @@
+{
+  "name": "Razor Miniflux",
+  "id": "razor-miniflux",
+  "available": true,
+  "short_desc": "Razor Miniflux by Rodrigo Mescua",
+  "author": "Rodrigo Mescua",
+  "port": 8822,
+  "categories": ["utilities"],
+  "description": "Aplicativo para gerenciar feed RSS hospedado no Miniflux.",
+  "tipi_version": 1,
+  "version": "v1.0.0",
+  "source": "https://github.com/romesc/RazorMinifluxDocker",
+  "exposable": true,
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1727573014227,
+  "updated_at": 1727573014227,
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "Miniflux Url",
+      "max": 100,
+      "min": 3,
+      "required": true,
+      "env_variable": "MINIFLUX_URL"
+    },
+    {
+      "type": "password",
+      "label": "Minflux Token",
+      "max": 120,
+      "min": 10,
+      "required": true,
+      "env_variable": "MINIFLUX_TOKEN"
+    },
+    {
+      "type": "number",
+      "label": "Page Size",
+      "required": false,
+      "default": 10,
+      "env_variable": "PAGE_SIZE"
+    }]
+}
