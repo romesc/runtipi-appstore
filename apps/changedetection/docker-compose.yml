@@ -1,5 +1,16 @@
 version: "3.7"
 services:
+  sockpuppetbrowser:
+    hostname: sockpuppetbrowser
+    image: dgtlmoon/sockpuppetbrowser:latest
+    cap_add:
+      - SYS_ADMIN
+    restart: unless-stopped
+    environment:
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1024
+      - SCREEN_DEPTH=16
+      - MAX_CONCURRENT_CHROME_PROCESSES=10
   changedetection:
     image: ghcr.io/dgtlmoon/changedetection.io:0.46.04
     container_name: changedetection
@@ -11,8 +22,8 @@ services:
     restart: unless-stopped
     networks:
       - tipi_main_network
-    # environment:
-    #   - PLAYWRIGHT_DRIVER_URL=ws://playwright-chrome:3000/
+    environment:
+      - PLAYWRIGHT_DRIVER_URL=ws://sockpuppetbrowser:3003
     labels:
       # Main
       traefik.enable: true
@@ -39,3 +50,6 @@ services:
       traefik.http.routers.changedetection-local.service: changedetection
       traefik.http.routers.changedetection-local.tls: true
       runtipi.managed: true
+    depends_on:
+      playwright-chrome:
+        condition: service_started
