@@ -23,7 +23,7 @@ services:
     networks:
       - tipi_main_network
     environment:
-      - PLAYWRIGHT_DRIVER_URL=ws://sockpuppetbrowser:3003
+      - PLAYWRIGHT_DRIVER_URL=ws://sockpuppetbrowser:3000
     labels:
       # Main
       traefik.enable: true
