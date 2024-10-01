@@ -51,5 +51,5 @@ services:
       traefik.http.routers.changedetection-local.tls: true
       runtipi.managed: true
     depends_on:
-      playwright-chrome:
+      sockpuppetbrowser:
         condition: service_started
