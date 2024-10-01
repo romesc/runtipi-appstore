@@ -5,6 +5,8 @@ services:
     image: dgtlmoon/sockpuppetbrowser:latest
     cap_add:
       - SYS_ADMIN
+    ports:
+      - 3003:3000
     restart: unless-stopped
     environment:
       - SCREEN_WIDTH=1920
@@ -23,7 +25,7 @@ services:
     networks:
       - tipi_main_network
     environment:
-      - PLAYWRIGHT_DRIVER_URL=ws://sockpuppetbrowser:3000
+      - PLAYWRIGHT_DRIVER_URL=http://192.168.0.20:3003
     labels:
       # Main
       traefik.enable: true
