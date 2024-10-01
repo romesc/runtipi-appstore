@@ -46,6 +46,8 @@ services:
     hostname: playwright-chrome
     image: browserless/chrome
     restart: unless-stopped
+    networks:
+      - tipi_main_network
     environment:
       - SCREEN_WIDTH=1920
       - SCREEN_HEIGHT=1024
