@@ -44,11 +44,12 @@ services:
         condition: service_started
   playwright-chrome:
     hostname: playwright-chrome
-    image: browserless/chrome
+    image: dgtlmoon/sockpuppetbrowser:latest
     restart: unless-stopped
     networks:
       - tipi_main_network
     environment:
+      - DEFAULT_LAUNCH_ARGS=[\"--window-size=1920,1080\"]
       - SCREEN_WIDTH=1920
       - SCREEN_HEIGHT=1024
       - SCREEN_DEPTH=16
