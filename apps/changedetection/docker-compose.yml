@@ -40,7 +40,7 @@ services:
       traefik.http.routers.changedetection-local.tls: true
       runtipi.managed: true
     depends_on:
-      playwright-chrome:
+      browser-chrome:
         condition: service_started
   browser-chrome:
     hostname: browser-chrome

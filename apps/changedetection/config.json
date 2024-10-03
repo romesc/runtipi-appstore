@@ -5,7 +5,7 @@
   "exposable": true,
   "id": "changedetection",
   "description": "The best and simplest free open source website change detection, restock monitor and notification service.",
-  "tipi_version": 33,
+  "tipi_version": 34,
   "version": "0.46.04",
   "categories": ["utilities"],
   "short_desc": "Website change detection.",
