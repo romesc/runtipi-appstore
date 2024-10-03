@@ -1,0 +1,19 @@
+{
+  "$schema": "../schema.json",
+  "name": "Channels DVR",
+  "id": "channels-dvr",
+  "available": true,
+  "short_desc": "Channels DVR Server",
+  "author": "",
+  "port": 8823,
+  "categories": ["featured"],
+  "description": "Channels DVR Server",
+  "tipi_version": 1,
+  "version": "1",
+  "source": "https://getchannels.com/dvr-server",
+  "exposable": false,
+  "supported_architectures": ["amd64"],
+  "created_at": 1727573014227,
+  "updated_at": 1727578498943,
+  "form_fields": []
+}
