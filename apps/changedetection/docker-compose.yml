@@ -12,7 +12,7 @@ services:
     networks:
       - tipi_main_network
     environment:
-      - WEBDRIVER_URL=http://browser-chrome:4444/wd/hub
+      - WEBDRIVER_URL=ws://browser-chrome:4444/wd/hub
     labels:
       # Main
       traefik.enable: true
@@ -50,6 +50,8 @@ services:
       - SCREEN_WIDTH=1920
       - SCREEN_HEIGHT=1080
       - SCREEN_DEPTH=24
+    ports:
+      - 4444:4444
     volumes:
       # Workaround to avoid the browser crashing inside a docker container
       # See https://github.com/SeleniumHQ/docker-selenium#quick-start
