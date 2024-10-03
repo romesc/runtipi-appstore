@@ -12,7 +12,7 @@ services:
     networks:
       - tipi_main_network
     environment:
-      - WEBDRIVER_URL=ws://browser-chrome:4444/wd/hub
+      - WEBDRIVER_URL=http://browser-chrome:4444/wd/hub
     labels:
       # Main
       traefik.enable: true
