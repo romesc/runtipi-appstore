@@ -12,7 +12,7 @@ services:
     networks:
       - tipi_main_network
     environment:
-      - WEBDRIVER_URL=http://browser-chrome:4444/wd/hub
+      - PLAYWRIGHT_DRIVER_URL=ws://playwright-chrome:3000
     labels:
       # Main
       traefik.enable: true
@@ -40,20 +40,18 @@ services:
       traefik.http.routers.changedetection-local.tls: true
       runtipi.managed: true
     depends_on:
-      browser-chrome:
+      playwright-chrome:
         condition: service_started
-  browser-chrome:
-    hostname: browser-chrome
-    image: selenium/standalone-chrome-debug:3.141.59
-    environment:
-      - VNC_NO_PASSWORD=1
-      - SCREEN_WIDTH=1920
-      - SCREEN_HEIGHT=1080
-      - SCREEN_DEPTH=24
-    ports:
-      - 4444:4444
-    volumes:
-      # Workaround to avoid the browser crashing inside a docker container
-      # See https://github.com/SeleniumHQ/docker-selenium#quick-start
-      - /dev/shm:/dev/shm
+  playwright-chrome:
+    hostname: playwright-chrome
+    image: dgtlmoon/sockpuppetbrowser:latest
     restart: unless-stopped
+    cap_add:
+      - SYS_ADMIN
+    networks:
+      - tipi_main_network
+    environment:
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1024
+      - SCREEN_DEPTH=16
+      - MAX_CONCURRENT_CHROME_PROCESSES=10
