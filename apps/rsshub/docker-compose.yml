@@ -1,12 +1,16 @@
 services:
   rsshub:
-    image: diygod/rsshub:2024-04-17
+    image: diygod/rsshub:chromium-bundled-2024-11-07
     container_name: rsshub
     restart: unless-stopped
     ports:
       - ${APP_PORT}:1200
     environment:
       TZ: ${TZ}
+      NODE_ENV: production
+      CACHE_TYPE: redis
+      REDIS_URL: "redis://rsshub_redis:6379/"
+      PUPPETEER_WS_ENDPOINT: "ws://rsshub_browserless:3000" # marked
     #env_file:
     #  - ${APP_DATA_DIR}/data/app.env
     networks:
