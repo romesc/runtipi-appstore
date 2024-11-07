@@ -41,6 +41,14 @@
       "env_variable": "MINIFLUX_TOKEN"
     },
     {
+      "type": "password",
+      "label": "Minflux Token Top",
+      "max": 120,
+      "min": 10,
+      "required": false,
+      "env_variable": "MINIFLUX_TOKEN_TOP"
+    },
+    {
       "type": "text",
       "label": "Page Size",
       "required": false,
