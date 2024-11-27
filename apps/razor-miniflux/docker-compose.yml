@@ -43,3 +43,4 @@ services:
       traefik.http.routers.razor-miniflux-local.entrypoints: websecure
       traefik.http.routers.razor-miniflux-local.service: razor-miniflux
       traefik.http.routers.razor-miniflux-local.tls: true
+      runtipi.managed: true
