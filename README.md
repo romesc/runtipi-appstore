@@ -1,17 +1,5 @@
 # Tipi App Store ⛺️
 
-> [!WARNING]
-> Unfortunately, we are no longer accepting pull requests from external collaborators due to the high volume of PRs we have to deal with daily.
->
-> We have reached a point in which it has become too complicated to validate, test and maintain this huge amount of apps resulting in a poor experience for our users.
->
-> We are working at the moment to implement a new feature to allow you to add multiple app stores to your Runtipi instance, so you can add your own apps without the need to send a PR to our repository.
->
-> This feature will be available very soon, so stay tuned!
->
-> You can still follow this guide and add your custom apps to your own instance through the appsRepoUrl property in the settings.json file.
->
-
 This is the official repository for the Tipi App Store. It contains all the apps that are available for download on [Tipi](https://github.com/runtipi/runtipi).
 
 ## How to get started
@@ -32,7 +20,7 @@ If you want to see new apps on Tipi you can either:
 - [Join the Discord](https://discord.gg/Bu9qEPnHsc) members of the community will add it.
 - Fork this repo and create the necessary files for a Tipi app. Follow this [guide](https://www.runtipi.io/docs/contributing/adding-a-new-app)`
 
-## Apps available (267)
+## Apps available (268)
 
 | Name                                                                         | Description                                                                                                                                                         | Port  |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
@@ -242,6 +230,7 @@ If you want to see new apps on Tipi you can either:
 | [qDirStat](https://github.com/linuxserver/docker-qdirstat)                   | A graphical disk usage analyzer                                                                                                                                     | 7125  |
 | [Radarr](https://github.com/Radarr/Radarr)                                   | Movie collection manager for Usenet and BitTorrent users.                                                                                                           | 8088  |
 | [Rallly](https://github.com/lukevella/rallly)                                | Scheduling and collaboration tool                                                                                                                                   | 8208  |
+| [Razor Miniflux](https://github.com/romesc/RazorMinifluxDocker)              | Razor Miniflux                                                                                                                                                      | 8822  |
 | [Readarr](https://github.com/Readarr/Readarr)                                | Book Manager and Automation (Sonarr for Ebooks)                                                                                                                     | 8112  |
 | [Recyclarr](https://github.com/recyclarr/recyclarr)                          | Sync TRaSH Guides.                                                                                                                                                  | 1111  |
 | [Resilio](https://github.com/bt-sync)                                        | Fast, reliable, and simple file sync and share solution.                                                                                                            | 8113  |
