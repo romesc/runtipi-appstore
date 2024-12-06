@@ -1,0 +1,19 @@
+{
+  "$schema": "../schema.json",
+  "name": "Razor Price History",
+  "id": "razor-pricehistory",
+  "available": true,
+  "short_desc": "Razor Price History",
+  "author": "Rodrigo Mescua",
+  "port": 8820,
+  "categories": [ "featured" ],
+  "description": "Aplicativo para gerenciar histórico de preços de mercados.",
+  "tipi_version": 1,
+  "version": "1733511207",
+  "source": "https://github.com/romesc/RazorPriceHistory",
+  "exposable": true,
+  "supported_architectures": [ "amd64" ],
+  "created_at": 1731806734354,
+  "updated_at": 1731806734354,
+  "form_fields": []
+}
