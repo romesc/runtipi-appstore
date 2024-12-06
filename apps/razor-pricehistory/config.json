@@ -1,5 +1,4 @@
 {
-  "$schema": "../schema.json",
   "name": "Razor Price History",
   "id": "razor-pricehistory",
   "available": true,
@@ -14,6 +13,5 @@
   "exposable": true,
   "supported_architectures": [ "amd64" ],
   "created_at": 1731806734354,
-  "updated_at": 1731806734354,
-  "form_fields": []
+  "updated_at": 1731806734354
 }
