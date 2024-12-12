@@ -7,11 +7,11 @@
   "port": 8820,
   "categories": [ "featured" ],
   "description": "Aplicativo para gerenciar histórico de preços de mercados.",
-  "tipi_version": 17,
-  "version": "1734030596",
+  "tipi_version": 18,
+  "version": "1734041709",
   "source": "https://github.com/romesc/RazorPriceHistory",
   "exposable": true,
   "supported_architectures": [ "amd64" ],
   "created_at": 1731806734354,
-  "updated_at": 1733750037456
+  "updated_at": 1733750037457
 }
